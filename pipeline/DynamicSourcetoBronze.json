@@ -58,6 +58,15 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEachGit",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"isSequential": true
+				}
 			}
 		],
 		"annotations": []
