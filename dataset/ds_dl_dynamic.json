@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"p_sink_foler": {
-				"type": "String"
-			},
 			"p_sink_folder": {
 				"type": "String"
 			},
