@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "CREATE DATABASE SCOPED CREDENTIAL cred_decathlon\nWITH \n    IDENTITY = 'Managed Identity'\n\nCREATE EXTERNAL DATA SOURCE source_silver\nWITH (\n    LOCATION = 'https://decathalonstorageshubham.blob.core.windows.net/silver',\n    CREDENTIAL = cred_decathlon\n)\n\nCREATE EXTERNAL DATA SOURCE source_gold\nWITH (\n    LOCATION = 'https://decathalonstorageshubham.blob.core.windows.net/gold',\n    CREDENTIAL = cred_decathlon\n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "decathlondb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
