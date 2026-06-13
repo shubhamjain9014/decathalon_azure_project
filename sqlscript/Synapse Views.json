@@ -1,0 +1,17 @@
+{
+	"name": "Synapse Views",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW gold.calendar\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Calendar',\n    FORMAT = 'PARQUET'\n) as q1;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "decathlondb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
