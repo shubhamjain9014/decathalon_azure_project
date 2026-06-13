@@ -2,7 +2,7 @@
 	"name": "Synapse Views",
 	"properties": {
 		"content": {
-			"query": "CREATE VIEW gold.calendar\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Calendar',\n    FORMAT = 'PARQUET'\n) as q1;",
+			"query": "CREATE VIEW gold.calendar\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Calendar',\n    FORMAT = 'PARQUET'\n) as q1;\n\nCREATE VIEW gold.customers\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Customers',\n    FORMAT = 'PARQUET'\n) as q1;\n\nCREATE VIEW gold.product_subcategories\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Product_SubCategories',\n    FORMAT = 'PARQUET'\n) as q1;\n\nCREATE VIEW gold.products\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Products',\n    FORMAT = 'PARQUET'\n) as q1;\n\nCREATE VIEW gold.returns\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Returns',\n    FORMAT = 'PARQUET'\n) as q1;\n\nCREATE VIEW gold.sales\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Sales',\n    FORMAT = 'PARQUET'\n) as q1;\n\n\nCREATE VIEW gold.territories\nAS\nSELECT\n*\nFROM\nOPENROWSET(\n    BULK 'https://decathalonstorageshubham.blob.core.windows.net/silver/Decathlon_Territories',\n    FORMAT = 'PARQUET'\n) as q1;",
 			"metadata": {
 				"language": "sql"
 			},
